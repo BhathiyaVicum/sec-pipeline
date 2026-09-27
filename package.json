@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Test repo for Trivy SCA in GitHub Actions",
   "dependencies": {
-    "lodash": "4.17.21",
+    "lodash": "4.18.0",
     "minimist": "1.2.8",
     "express": "4.21.1"
   }
