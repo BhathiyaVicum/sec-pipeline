@@ -1,0 +1,22 @@
+name: SCA Scan
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  trivy-sca:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run trivy SCA
+        uses: aquasecurity/trivy-action@0.24.0
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          severity: 'HIGH,CRITICAL'
+          exit-code: '1'
+          ignore-unfixed: true
