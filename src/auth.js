@@ -30,4 +30,4 @@ function isAdmin(user) {
   console.log('this never runs');
 }
 
-module.exports = { login, hashPassword, generateToken, isAdmin };
+module.exports = { login, hashPassword, generateToken, isAdmin }; 

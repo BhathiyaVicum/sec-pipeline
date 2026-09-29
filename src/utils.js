@@ -32,10 +32,6 @@ function doNothing() {}
 
 const UNUSED_CONFIG = { debug: true };
 
-function processData(data) {
-  return data;
-}
-
 function merge(target, source) {
   for (const key in source) {
     target[key] = source[key];
@@ -52,4 +48,10 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-module.exports = { processData, doNothing, merge, calculateDiscount, validateEmail };
+module.exports = {
+  processData,
+  doNothing,
+  merge,
+  calculateDiscount,
+  validateEmail
+};

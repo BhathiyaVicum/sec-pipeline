@@ -9,6 +9,10 @@ describe('auth', () => {
   test('isAdmin returns false for non-admin', () => {
     expect(isAdmin({ role: 'user' })).toBe(false);
   });
+
+  test('isAdmin returns true for admin', () => {
+    expect(isAdmin({ role: 'admin' })).toBe(true);
+  });
 });
 
 describe('utils', () => {
@@ -22,5 +26,9 @@ describe('utils', () => {
 
   test('validateEmail accepts valid email', () => {
     expect(validateEmail('a@b.com')).toBe(true);
+  });
+
+  test('validateEmail rejects invalid email', () => {
+    expect(validateEmail('not-an-email')).toBe(false);
   });
 });
