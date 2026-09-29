@@ -1,13 +1,40 @@
 {
-  "name": "trivy-sca-lab",
+  "name": "sec-pipeline",
   "version": "1.0.0",
-  "description": "Test repo for Trivy SCA in GitHub Actions",
-  "dependencies": {
-    "express": "4.21.1",
-    "lodash": "4.17.21",
-    "minimist": "1.2.8"
+  "description": "Demo project for SonarQube vulnerability detection",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "jest --coverage",
+    "lint": "eslint src"
   },
-  "overrides": {
-    "path-to-regexp": "0.1.12"
-  }
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "testEnvironment": "node"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BhathiyaVicum/sec-pipeline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BhathiyaVicum/sec-pipeline/issues"
+  },
+  "homepage": "https://github.com/BhathiyaVicum/sec-pipeline#readme",
+  "keywords": []
 }
